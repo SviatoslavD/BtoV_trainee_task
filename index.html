@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="reset.css">
+		<script src="angular.js"></script>
+		<script src="angular-ui-router.min.js"></script>
+		<script src="services/services.module.js"></script>
+		<script src="services/services.name.js"></script>
+		<script src="page/page.module.js"></script>
+		<script src="page/page.controller.js"></script>
+		<script src="userExperience/dirUserExp.js"></script>
+		<script src="userProfile-Skills/dirUserProfile.js"></script>
+		<!--script src="router/router.config.js"></script-->
+	</head>
+	<body ng-app="pageApp">
+		<div class="wrapper" ng-controller="PageController as pageController" ng-click="pageController.reset()">
+			<!--header-->
+			<section class="col-sm-9">
+				<div class="toggle">
+					<div class="hub-modes btn-group pull-right clearfix">
+		        		<a class="btn btn-warning" ng-class="{active: pageController.isEdit}" ng-click="pageController.globalStateIsEdit()">Edit</a>
+		        		<a class="btn btn-warning active" ng-class="{active: !pageController.isEdit}" ng-click="pageController.globalStateIsView()">View</a>
+					</div>
+				</div>
+				<section>
+					<div class="header">
+						<div class="logo">
+							<img class="img-rounded" src="images/n-ix-logo.png">
+						</div>
+
+						<!--EDIT name (clicked)-->
+						<form class="nameForm" ng-show="pageController.isEditName">
+							<div class="nameFields">
+								<input ng-model="pageController.fullName.firstName" class="nameField" type="text" placeholder="empty">
+								<input ng-model="pageController.fullName.lastName" class="nameField" type="text" placeholder="empty">
+								<span>
+									<button ng-click="pageController.acceptName()" type="submit" class="btn btn-default active"> 
+										<span class="glyphicon glyphicon-ok"></span>
+									</button>
+									<button ng-click="pageController.rejectName()" type="submit" class="btn btn-default">
+										<span class="glyphicon glyphicon-remove"></span>
+									</button>
+								</span>
+							</div>
+						</form>
+
+						<!--EDIT name-->
+						<div class="name" ng-if="pageController.isEdit && !pageController.isEditName" ng-click="pageController.changeStateName()">
+							<span ng-if="!pageController.fullName.firstName" class="nameView">
+								empty
+							</span>
+							<span ng-if="!pageController.fullName.lastName" class="nameView">
+								empty
+							</span>
+							<span ng-if="pageController.fullName.firstName" class="nameView">
+								{{ pageController.fullName.firstName }}
+							</span>
+							<span ng-if="pageController.fullName.lastName" class="nameView">
+								{{ pageController.fullName.lastName }}
+							</span>
+						</div>
+
+						<!--VIEW name-->
+						<div class="name" ng-if="!pageController.isEdit">
+							<span ng-if="pageController.fullName.firstName" class="nameView">
+								{{ pageController.fullName.firstName }}
+							</span>
+							<span ng-if="pageController.fullName.lastName" class="nameView">
+								{{ pageController.fullName.lastName }}
+							</span>
+						</div>
+						<br>
+
+						<!--EDIT additional information (clicked)-->
+						<form ng-show="pageController.isEditInfo">
+							<textarea ng-model="pageController.fullName.additInfo" class="additionalInfoField" rows="3" placeholder="empty"></textarea>
+							<div class="additionalInfoFieldButtons">
+								<button ng-click="pageController.acceptName()" type="submit" class="btn btn-default active"> 
+									<span class="glyphicon glyphicon-ok"></span>
+								</button>
+								<button ng-click="pageController.rejectName()" type="submit" class="btn btn-default">
+									<span class="glyphicon glyphicon-remove"></span>
+								</button>
+							</div>
+						</form>
+
+						<!--EDIT additional information-->
+						<div ng-if="pageController.isEdit && !pageController.isEditInfo" ng-click="pageController.changeStateInfoField()">
+							<div class="additionalInfoView" ng-if="!pageController.fullName.additInfo">
+								empty
+							</div>
+							<div class="additionalInfoView" ng-if="pageController.fullName.additInfo">
+								{{ pageController.fullName.additInfo }}
+							</div>
+						</div>
+
+						<!--VIEW additional information-->
+						<div class="additionalInfoView" ng-if="!pageController.isEdit">
+							{{ pageController.fullName.additInfo }}
+						</div>
+					</div>
+				</section>
+
+				<!--userExperience-->
+				<section class="userExperience">
+					<div>
+						<p class="minorTitle"> USER EXPERIENCE </p>
+						<!--Add/Edit new experience-->
+						<dir-user-exp-new ng-repeat="expItem in pageController.expItemContent" class="newExpEditCreateView" type="view-edit"> </dir-user-exp-new>
+						<dir-user-exp-new class="newExpEditCreateView" type="new-create"> </dir-user-exp-new>
+					</div>
+				</section>
+			</section>
+
+			<!--investorProfile-->
+			<section class="col-sm-3">
+				<div class="investorProfile">
+					<dir-user-profile> </dir-user-profile>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

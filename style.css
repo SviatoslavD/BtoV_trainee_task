@@ -1,0 +1,449 @@
+
+.wrapper {
+  font-family: 'Lato';
+  font-size: 14px;
+}
+
+.toggle {
+	margin-top: 15px;
+}
+
+/*======= Header Styles ========*/
+.active {
+	background-color: #FF6600;
+}
+
+.col-sm-9{
+	background-color: #FAFAFA; 
+	padding: 40px;
+	min-height: 853px;
+}
+
+.header {
+	margin-top: 60px; 
+	border: 1px solid #ccc;
+	height: 296px;
+	background: url("images/123.jpg") center;
+	background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.logo {
+	margin-top: 25px;
+	text-align: center;
+}
+
+.name {
+	width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nameView {
+	color: #FF6600;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.nameForm {
+	width: 50%;
+    margin: 0 auto;
+}
+
+.nameFields {
+	width: 330px;
+    margin: 0 auto;
+}
+
+.nameField {
+	width: 115px;
+	height: 37px;
+	background: transparent;
+    color: #FF6600;
+    font-size: 20px;
+}
+
+.additionalInfoField {
+	margin-left: 20px;
+	margin-right: 15px;
+	width: 100%;
+	max-width: 1050px;
+	height: 100px;
+	background: transparent;
+	float: left;
+	color: #FF6600;
+}
+
+.additionalInfoView {
+	width: 1200px;
+	height: 100px;
+	margin-left: 20px;
+	margin-right: 15px;
+	color: #FF8533;
+	overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.additionalInfoFieldButtons {
+	padding-top: 15px;
+}
+
+/* ========= User Experience Styles ========= */
+
+.userExperience {
+	background-color: #FAFAFA;
+	padding: 35px;
+	border-top: 1px solid #ccc;
+	margin-top: 35px;
+}
+
+.minorTitle {
+	margin-bottom: 35px;
+	font-size: 12px;
+}
+
+.newExpEditCreateView {
+	float: left;
+}
+
+.expItem {
+	height: 300px;
+	width: 250px;
+	border: 1px solid #ccc;
+	margin: 15px;
+	background-color: #FFF;
+}
+
+.expItemTitle {
+	border-bottom: 1px solid #ccc;
+	padding: 15px;
+}
+
+.expInfoFields {
+	border-bottom: 1px solid #ccc;
+	padding: 15px;
+}
+
+.companyRoletypeField {
+	border: 1px solid #F0AD4E;
+	border-radius: 2px;
+	margin-bottom: 15px;
+}
+
+.titleDescripField {
+	border-radius: 2px;
+	margin-bottom: 15px;
+}
+
+.expButtons {
+	padding: 15px;
+}
+
+.createExpItem {
+	height: 188px;
+	width: 163px;
+	border: 1px solid #ccc;
+	margin: 15px;
+}
+
+.imgPlus {
+	margin-left: 70px;
+	margin-top: 82px;
+	height: 24px;
+	width: 24px;
+	background: url(images/create-1.png) 0 0;
+	cursor: pointer;
+}
+
+.img-circle {
+	height: 46px;
+	width: 46px;
+	margin: 8px 0px 5px 59px;
+}
+
+.companyFieldView {
+	text-align: center;
+}
+
+.roletypeFieldView {
+	text-align: center;
+	color: #AFAFB1;
+}
+
+.descriptionFieldView {
+	text-align: center;
+	color: #807F7F;
+}
+
+.closeImage2 {
+	display: inline-block;
+	position: absolute;
+	margin-top: -11px;
+	margin-left: 150px;
+	width: 24px;
+	height: 24px;
+	background: url(images/close-2.png) 0 0;
+	cursor: pointer;
+}
+
+.pencilButton {
+	width: 14px;
+	height: 14px;
+	background: url(images/pencil-1.png) 0 0;
+	cursor: pointer;
+	float: right;
+	margin-top: 55px;
+	margin-right: 5px;
+}
+/* ========= Investor Profile Styles ========= */
+
+.col-sm-3 {
+	border-left: 1px solid #ccc;
+}
+
+.investorProfile {
+	margin-top: 70px;
+	width: 400px;
+	margin-left: 25px;
+}
+
+.profile-module {
+	display: block;
+	height: 300px;
+	margin-bottom: 30px;
+}
+
+.profile-section {
+	height: 50px;
+  	margin-bottom: 7px;
+}
+
+.title-3 {
+	color: #afafaf;
+	width: 100px;
+  	float: left;
+ 	font-weight: normal;
+ 	display: inline-block;
+  	max-width: 100%;
+  	margin-bottom: 5px;
+  	margin-right: 60px;
+}
+
+.profile-field-edit {
+	width: 135px;
+	height: 48px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+.editable-buttons {
+	padding: 0;
+    margin: 0;
+    display: inline-block;
+  	vertical-align: top;
+}
+
+.btn-accept-reject {
+  padding-left: 10px;
+  padding-right: 0;
+  height: 48px;
+  margin: 0;
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.imgAccept {
+	height: 15px;
+	width: 15px;
+	background: url(images/accept-1.png) 0 0;
+	cursor: pointer;
+}
+
+.imgReject {
+	height: 15px;
+	width: 15px;
+	background: url(images/reject-1.png) 0 0;
+	cursor: pointer;
+}
+
+.editable-click-profile {
+  border: 1px solid #ededed;
+  border-radius: 2px;
+  width: 185px;
+  height: 48px;
+  float: right;
+  margin-right: 54px;
+  padding-top: 15px;
+  padding-left: 15px; 
+}
+
+.locationValue {
+	float: left;
+}
+
+.arrow-up {
+  width: 6px;
+  height: 6px;
+  background: url(images/arrow-up-1.jpg) 0 0 no-repeat;
+  float: right;
+  margin-top: 2px;
+  margin-right: 12px;
+}
+
+.arrow-down {
+  width: 6px;
+  height: 6px;
+  background: url(images/arrow-down-1.jpg) 0 0 no-repeat;
+  float: right;
+  margin-top: -6px;
+  margin-right: 12px;
+}
+
+.pencilButton-1 {
+	width: 14px;
+	height: 14px;
+	background: url(images/pencil-1.png) 0 0;
+	float: right;
+	margin-right: 12px;
+}
+
+.pencilButton-2 {
+	width: 14px;
+	height: 14px;
+	background: url(images/pencil-1.png) 0 0;
+	float: right;
+	margin-right: 12px;
+	margin-left: 250px;
+}
+
+/*investments preferences*/
+
+.message-field-edit-clicked {
+  border: 1px solid #ededed;
+  border-radius: 2px;
+  padding: 15px;
+  border-radius: 2px;
+  color: #807f7f;
+  height: 100%;
+  position: relative;
+  width: 290px;
+}
+
+.message-field-edit {
+  border: 1px solid #ededed;
+  border-radius: 2px;
+  padding-top: 9px; 
+  color: #807f7f;
+  height: 32px;
+  width: 335px;
+  position: relative;
+}
+
+.message-view {
+  padding-left: 10px; 
+  color: #807f7f;
+  height: 32px;
+  width: 335px;
+  position: relative;
+}
+
+.profile-item {
+  margin-top: 6px;
+  margin-left: 15px;
+  border: 1px solid #ededed;
+  border-radius: 2px;
+  width: 90px;
+  height: 29px;
+  float: left;
+}
+
+.imgReject-2 {
+	height: 15px;
+	width: 15px;
+	background: url(images/reject-1.png) 0 0;
+	cursor: pointer;
+	float: right;
+	margin-right: 3px;
+	margin-top: -15px;	
+}
+
+.item-text {
+	padding-top: 7px;
+	padding-left: 3px;
+}
+
+.add-item-profile {
+  border: 1px solid #ededed; 
+  border-radius: 2px;
+  margin-top: 20px;
+  padding-top: 10px;
+  color: #807f7f;
+  width: 335px;
+  position: relative;
+}
+
+.add-item-profile-button {
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  text-align: center;
+  vertical-align: baseline;
+  margin-top: 8px;
+  margin-left: 10px;
+  margin-bottom: 8px;
+}
+
+.plusButton-2 {
+	height: 24px;
+	width: 24px;
+	background: url(images/create-1.png) 0 0;
+	float: left;
+	margin-right: 3px;
+}
+
+.plusButton-2-text {
+  vertical-align: top;
+  margin-top: 3px;
+  color: #60A99A;
+  display: inline-block;
+}
+
+.roletype-2 {
+  margin-top: 6px;
+  margin-left: 15px;
+  border: 1px solid #60A99A; 
+  border-radius: 2px;
+  color: #60A99A;
+  width: 108px;
+  height: 29px;
+  margin-bottom: 6px;
+}
+
+.skills-module {
+	display: block;
+	margin-bottom: 30px;
+	min-height: 116px;
+}
+
+/* ========= @media ========= */
+
+@media screen and (max-width: 1700px) {
+
+	.additionalInfoField {
+		width: 85%;
+	}
+
+}
+
+@media screen and (max-width: 1730px) {
+
+	.additionalInfoView {
+		width: 95%;
+	}
+
+}
+

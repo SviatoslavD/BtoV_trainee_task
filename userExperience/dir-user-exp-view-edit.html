@@ -1,0 +1,34 @@
+<!--Add new experience EDIT mode -->
+<div class="expItem" ng-if="pageController.isEditExp[$index] && pageController.isEdit">
+	<form>
+		<p class="expItemTitle">Edit experience</p>
+		<div class="expInfoFields">
+			<input class="companyRoletypeField"  ng-model="expItem.company" type="text" placeholder="Search for Company">
+			<input class="companyRoletypeField" ng-model="expItem.roletype" list="roletypeField" placeholder="Roletype">
+			<datalist id="roletypeField">
+				<option value="Founder">
+				<option value="Employee">
+				<option value="Lead-Investor">
+				<option value="Co-Investor">
+				<option value="Advisor">
+				<option value="Attorney">
+				<option value="Board Member">
+			</datalist>
+			<input class="titleDescripField"  ng-model="expItem.title" type="text" placeholder="Title">
+			<input class="titleDescripField"  ng-model="expItem.description" type="text" placeholder="Description">
+		</div>
+		<div class="expButtons">
+			<button ng-click="pageController.updateExpItem($index)" class="btn btn-warning" type="submit">Edit</button>
+			<button ng-click="pageController.rejectExpChanges($index)" class="btn btn-default" type="submit">Cancel</button>
+		</div>
+	</form>
+</div>
+<!--Experience item VIEW mode -->
+<div class="createExpItem" ng-if="!pageController.isEditExp[$index]">
+	<div ng-if="pageController.isEdit" class="closeImage2" ng-click="pageController.deleteExpItem($index)"></div>
+	<img class="img-circle" src="images/default-user-image.png">
+	<p class="companyFieldView">{{expItem.company}}</p>
+	<p class="roletypeFieldView">{{expItem.roletype}}</p>
+	<p class="descriptionFieldView">{{expItem.description}}</p>
+	<div ng-if="pageController.isEdit" class="pencilButton" ng-click="pageController.editExperience($index)"></div>
+</div>

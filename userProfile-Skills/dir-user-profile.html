@@ -1,0 +1,332 @@
+<!--INVESTOR PROFILE-->
+<div class="profile-module">
+	<p class="minorTitle">INVESTOR PROFILE</p>
+	<!--LOCATION-->
+	<form class="profile-section">
+		<label class="title-3">Location</label>
+		<!--VIEW mode-->
+		<div ng-if="!pageController.isEdit && !pageController.investorProfileData.location" class="locationValue">
+			Not set
+		</div>
+		<div ng-if="!pageController.isEdit && pageController.investorProfileData.location" class="locationValue">
+			{{pageController.investorProfileData.location}}
+		</div>
+		<!--Editing profile fields (clicked)-->
+		<div ng-if="pageController.isEdit && pageController.isEditProfileFields.location">
+			<input class="profile-field-edit" list="roletypeLocation" ng-model="pageController.investorProfileData.location" >
+			<datalist id="roletypeLocation">
+				<option ng-repeat="item in pageController.dropDownCountrys" value="{{item}}">
+			</datalist>
+			<span class="editable-buttons">
+				<button class="btn-accept-reject" type="submit" ng-click="pageController.acceptProfile()">
+					<div class="imgAccept"></div>
+				</button>
+				<button class="btn-accept-reject" type="submit" ng-click="pageController.rejectProfile()">
+					<div class="imgReject"></div>
+				</button>
+			</span>
+		</div>
+		<!--Ready for editing profile fields-->
+		<div ng-if="pageController.isEdit && !pageController.isEditProfileFields.location">
+			<div ng-click="pageController.editProfile('location')" class="editable-click-profile">
+				<div ng-if="!pageController.investorProfileData.location" class="locationValue">
+					Not set
+				</div>
+				<div ng-if="pageController.investorProfileData.location" class="locationValue">
+					{{pageController.investorProfileData.location}}
+				</div>
+				<div class="arrow-up"></div>
+				<br>
+				<div class="arrow-down"></div>
+			</div>
+		</div>
+	</form>
+	<!--INVESTMENT-->
+	<form class="profile-section">
+		<label class="title-3">Investment per year (EUR)</label>
+		<!--VIEW mode-->
+		<div ng-if="!pageController.isEdit && !pageController.investorProfileData.investment" class="locationValue">
+			0
+		</div>
+		<div ng-if="!pageController.isEdit && pageController.investorProfileData.investment" class="locationValue">
+			{{pageController.investorProfileData.investment}}
+		</div>
+		<!--Editing profile fields(clicked)-->
+		<div ng-if="pageController.isEdit && pageController.isEditProfileFields.investment">
+			<input type="text" class="profile-field-edit" ng-model="pageController.investorProfileData.investment">
+			<span class="editable-buttons">
+				<button class="btn-accept-reject" type="submit" ng-click="pageController.acceptProfile()">
+					<div class="imgAccept"></div>
+				</button>
+				<button class="btn-accept-reject" type="submit" ng-click="pageController.rejectProfile()">
+					<div class="imgReject"></div>
+				</button>
+			</span>
+		</div>
+		<!--Ready for editing profile fields -->
+		<div ng-if="pageController.isEdit && !pageController.isEditProfileFields.investment">
+			<div ng-click="pageController.editProfile('investment')" class="editable-click-profile">
+				<div ng-if="!pageController.investorProfileData.investment" class="locationValue">
+					0
+				</div>
+				<div ng-if="pageController.investorProfileData.investment" class="locationValue">
+					{{pageController.investorProfileData.investment}}
+				</div>
+				<div class="pencilButton-1"></div>
+			</div>
+		</div>
+	</form>
+	<!--INVESTOR TYPE-->
+	<form class="profile-section">
+		<label class="title-3">Investor Type</label>
+		<!--VIEW mode-->
+		<div ng-if="!pageController.isEdit && !pageController.investorProfileData.type" class="locationValue">
+			Not set
+		</div>
+		<div ng-if="!pageController.isEdit && pageController.investorProfileData.type" class="locationValue">
+			{{pageController.investorProfileData.type}}
+		</div>
+		<!--Editing profile fields (clicked)-->
+		<div ng-if="pageController.isEdit && pageController.isEditProfileFields.type">
+			<input class="profile-field-edit" list="roletypeInvestor" ng-model="pageController.investorProfileData.type">
+			<datalist id="roletypeInvestor">
+				<option ng-repeat="item in pageController.dropDownTypes" value="{{item}}">
+			</datalist>
+			<span class="editable-buttons">
+				<button class="btn-accept-reject" type="submit" ng-click="pageController.acceptProfile()">
+					<div class="imgAccept"></div>
+				</button>
+				<button class="btn-accept-reject" type="submit" ng-click="pageController.rejectProfile()">
+					<div class="imgReject"></div>
+				</button>
+			</span>
+		</div>
+		<!--Ready for editing profile fields-->
+		<div ng-if="pageController.isEdit && !pageController.isEditProfileFields.type">
+			<div ng-click="pageController.editProfile('type')" class="editable-click-profile">
+				<div ng-if="!pageController.investorProfileData.type" class="locationValue">
+					Not set
+				</div>
+				<div ng-if="pageController.investorProfileData.type" class="locationValue">
+					{{pageController.investorProfileData.type}}
+				</div>
+				<div class="arrow-up"></div>
+				<br>
+				<div class="arrow-down"></div>
+			</div>
+		</div>
+	</form>
+	<!--CAPITAL-->
+	<form class="profile-section">
+		<label class="title-3">Capital under management (EUR)</label>
+		<!--VIEW mode-->
+		<div ng-if="!pageController.isEdit && !pageController.investorProfileData.capital" class="locationValue">
+			0
+		</div>
+		<div ng-if="!pageController.isEdit && pageController.investorProfileData.capital" class="locationValue">
+			{{pageController.investorProfileData.capital}}
+		</div>
+		<!--Editing profile fields (clicked)-->
+		<div ng-if="pageController.isEdit && pageController.isEditProfileFields.capital">
+			<input class="profile-field-edit" type="text" ng-model="pageController.investorProfileData.capital">
+			<span class="editable-buttons">
+				<button class="btn-accept-reject" type="submit" ng-click="pageController.acceptProfile()">
+					<div class="imgAccept"></div>
+				</button>
+				<button class="btn-accept-reject" type="submit" ng-click="pageController.rejectProfile()">
+					<div class="imgReject"></div>
+				</button>
+			</span>
+		</div>
+		<!--Ready for editing profile fields-->
+		<div ng-if="pageController.isEdit && !pageController.isEditProfileFields.capital">
+			<div ng-click="pageController.editProfile('capital')" class="editable-click-profile">
+				<div ng-if="!pageController.investorProfileData.capital" class="locationValue">
+					0
+				</div>
+				<div ng-if="pageController.investorProfileData.capital" class="locationValue">
+					{{pageController.investorProfileData.capital}}
+				</div>
+				<div class="pencilButton-1"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!--INVESTMENT PREFERENCES-->
+<div class="skills-module">
+	<p class="minorTitle">INVESTMENT PREFERENCES</p>
+	<form>
+		<!--INVESTMENT PREFERENCES-->
+		<!--VIEW mode-->
+		<div ng-if="!pageController.isEdit">
+			<div class="message-view">
+				{{pageController.investorProfileData_2.investment.message}}
+			</div>
+			<div ng-repeat="item in pageController.investorProfileData_2.investment.item track by $index" class="profile-item">
+				<div class="item-text">
+					{{item}}
+				</div>
+			</div>
+		</div>
+
+		<!--EDIT message field (clicked)-->
+		<div ng-if="pageController.isEdit && pageController.isEditProfileFields.preferences">
+			<textarea class="message-field-edit-clicked" type="text" ng-model="pageController.investorProfileData_2.investment.message"> </textarea>
+			<span class="editable-buttons">
+				<button class="btn-accept-reject" type="submit" ng-click="pageController.acceptInvestment()">
+					<div class="imgAccept"></div>
+				</button>
+				<button class="btn-accept-reject" ng-click="pageController.rejectInvestment()">
+					<div class="imgReject"></div>
+				</button>
+			</span>
+		</div>
+		<!--EDIT message field-->
+		<div ng-if="pageController.isEdit && !pageController.isEditProfileFields.preferences" ng-click="pageController.editProfile('preferences')" class="message-field-edit">
+			{{pageController.investorProfileData_2.investment.message}}
+			<div class="pencilButton-1"></div>
+		</div>
+
+		<!--EDIT items field-->
+		<div ng-if="pageController.isEdit" class="add-item-profile">
+			<div class="pencilButton-2"></div>
+			<div ng-repeat="item in pageController.investorProfileData_2.investment.item track by $index" class="profile-item">
+				<div class="item-text">
+					{{item}}
+				</div>
+				<div class="imgReject-2" ng-click="pageController.deleteItem($index, 'investment')"></div>
+			</div>
+			<!--plus item button-->
+			<div ng-if="!pageController.isEditProfileFields.preferencesItem" ng-click="pageController.editProfile('preferencesItem')" class="add-item-profile-button">
+				<div class="plusButton-2"></div>
+				<span class="plusButton-2-text">Add item...</span>
+			</div>
+			<!--drop dowm munu (Add item button is clicked)-->
+			<div ng-if="pageController.isEdit && pageController.isEditProfileFields.preferencesItem">
+				<select class="roletype-2" ng-model="pageController.selectedItem"
+					ng-options="opt as opt.label for opt in pageController.optionsCountry" ng-click="pageController.acceptItem('investment')">
+				</select>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!--EXPERIENCE-->
+<div class="skills-module">
+	<p class="minorTitle">EXPERIENCE</p>
+	<form>
+		<!--EXPERIENCE-->
+		<!--VIEW mode-->
+		<div ng-if="!pageController.isEdit">
+			<div class="message-view">
+				{{pageController.investorProfileData_2.experience.message}}
+			</div>
+			<div ng-repeat="item in pageController.investorProfileData_2.experience.item track by $index" class="profile-item">
+				<div class="item-text">
+					{{item}}
+				</div>
+			</div>
+		</div>
+
+		<!--EDIT message field (clicked)-->
+		<div ng-if="pageController.isEdit && pageController.isEditProfileFields.experience">
+			<textarea class="message-field-edit-clicked" type="text" ng-model="pageController.investorProfileData_2.experience.message"> </textarea>
+			<span class="editable-buttons">
+				<button class="btn-accept-reject" type="submit" ng-click="pageController.acceptInvestment()">
+					<div class="imgAccept"></div>
+				</button>
+				<button class="btn-accept-reject" ng-click="pageController.rejectInvestment()">
+					<div class="imgReject"></div>
+				</button>
+			</span>
+		</div>
+		<!--EDIT message field-->
+		<div ng-if="pageController.isEdit && !pageController.isEditProfileFields.experience" ng-click="pageController.editProfile('experience')" class="message-field-edit">
+			{{pageController.investorProfileData_2.experience.message}}
+			<div class="pencilButton-1"></div>
+		</div>
+
+		<!--EDIT item field-->
+		<div ng-if="pageController.isEdit" class="add-item-profile">
+			<div class="pencilButton-2"></div>
+			<div ng-repeat="item in pageController.investorProfileData_2.experience.item track by $index" class="profile-item">
+				<div class="item-text">
+					{{item}}
+				</div>
+				<div class="imgReject-2" ng-click="pageController.deleteItem($index, 'experience')"></div>
+			</div>
+			<!--Add item button-->
+			<div ng-if="!pageController.isEditProfileFields.experienceItem" ng-click="pageController.editProfile('experienceItem')" class="add-item-profile-button">
+				<span class="plusButton-2"></span>
+				<span class="plusButton-2-text">Add item...</span>
+			</div>
+			<!--drop dowm munu (Add item button is clicked)-->
+			<div ng-if="pageController.isEdit && pageController.isEditProfileFields.experienceItem">
+				<select class="roletype-2" ng-model="pageController.selectedItem"
+					ng-options="opt as opt.label for opt in pageController.optionsCountry" ng-click="pageController.acceptItem('experience')">
+				</select>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!--SKILLS-->
+<div class="skills-module">
+	<p class="minorTitle">SKILLS</p>
+	<form>
+		<!--SKILLS-->
+		<!--VIEW mode-->
+		<div ng-if="!pageController.isEdit">
+			<div class="message-view">
+				{{pageController.investorProfileData_2.skills.message}}
+			</div>
+			<div ng-repeat="item in pageController.investorProfileData_2.skills.item track by $index" class="profile-item">
+				<div class="item-text">
+					{{item}}
+				</div>
+			</div>
+		</div>
+
+		<!--EDIT message field (clicked)-->
+		<div ng-if="pageController.isEdit && pageController.isEditProfileFields.skills">
+			<textarea class="message-field-edit-clicked" type="text" ng-model="pageController.investorProfileData_2.skills.message"> </textarea>
+			<span class="editable-buttons">
+				<button class="btn-accept-reject" type="submit" ng-click="pageController.acceptInvestment()">
+					<div class="imgAccept"></div>
+				</button>
+				<button class="btn-accept-reject" ng-click="pageController.rejectInvestment()">
+					<div class="imgReject"></div>
+				</button>
+			</span>
+		</div>
+		<!--EDIT message field-->
+		<div ng-if="pageController.isEdit && !pageController.isEditProfileFields.skills" ng-click="pageController.editProfile('skills')" class="message-field-edit">
+			{{pageController.investorProfileData_2.skills.message}}
+			<div class="pencilButton-1"></div>
+		</div>
+		
+		<!--EDIT item field-->
+		<div ng-if="pageController.isEdit" class="add-item-profile">
+			<div class="pencilButton-2"></div>
+			<div ng-repeat="item in pageController.investorProfileData_2.skills.item track by $index" class="profile-item">
+				<div class="item-text">
+					{{item}}
+				</div>
+				<div class="imgReject-2" ng-click="pageController.deleteItem($index, 'skills')"></div>
+			</div>
+			<!--Add item button-->
+			<div ng-if="!pageController.isEditProfileFields.skillsItem" ng-click="pageController.editProfile('skillsItem')" class="add-item-profile-button">
+				<span class="plusButton-2"></span>
+				<span class="plusButton-2-text">Add item...</span>
+			</div>
+			<!--drop dowm munu (Add item button is clicked)-->
+			<div ng-if="pageController.isEdit && pageController.isEditProfileFields.skillsItem">
+				<select class="roletype-2" ng-model="pageController.selectedItem"
+					ng-options="opt as opt.label for opt in pageController.optionsCountry" ng-click="pageController.acceptItem('skills')">
+				</select>
+			</div>
+		</div>
+	</form>
+</div>
+

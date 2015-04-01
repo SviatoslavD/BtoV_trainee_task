@@ -1,0 +1,30 @@
+<!--Add new experience EDIT mode, fill up the form -->
+<div class="expItem" ng-if="pageController.isAddExp && pageController.isEdit">
+	<form>
+		<p class="expItemTitle">Add new experience</p>
+		<div class="expInfoFields">
+			<input class="companyRoletypeField"  ng-model="pageController.newExperience.company" type="text" placeholder="Search for Company">
+			<input class="companyRoletypeField" ng-model="pageController.newExperience.roletype" list="roletypeField" placeholder="Roletype">
+			<datalist id="roletypeField">
+				<option value="Founder">
+				<option value="Employee">
+				<option value="Lead-Investor">
+				<option value="Co-Investor">
+				<option value="Advisor">
+				<option value="Attorney">
+				<option value="Board Member">
+			</datalist>
+			<input class="titleDescripField"  ng-model="pageController.newExperience.title" type="text" placeholder="Title">
+			<input class="titleDescripField"  ng-model="pageController.newExperience.description" type="text" placeholder="Description">
+		</div>
+		<div class="expButtons">
+			<button ng-click="pageController.acceptExpItem()" class="btn btn-warning" type="submit">Add</button>
+			<button ng-click="pageController.rejectExpItem()" class="btn btn-default" type="submit">Cancel</button>
+		</div>
+	</form>
+</div>
+<!--Add new experience emty form, EDIT mode -->
+<div class="createExpItem" ng-if="pageController.isEdit && !pageController.isAddExp">
+	<div class="imgPlus" ng-click="pageController.addNewExpItem()">
+	</div>
+</div>
